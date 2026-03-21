@@ -1,1 +1,102 @@
 
+/* This is the styling for my website */
+body {
+        margin: 0;
+        padding: 0;
+        /* Subtle grey-to-white gradient */
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background-attachment: fixed;
+        /* Web-safe readable font */
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2d3436;
+        line-height: 1.6;
+    }
+
+    /* 2. Header Styles */
+    header {
+        text-align: center; /* Align text center */
+        padding: 60px 20px; /* Padding */
+        background-color: #1e272e; /* Dark background */
+        color: #ffffff;
+    }
+
+    header h1 {
+        font-size: 2.8rem; /* Large font size */
+        font-weight: 800; /* Heavy weight */
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+    blockquote {
+        font-style: italic;
+        opacity: 0.7;
+        margin-top: 10px;
+    }
+
+    /* 3. Navigation Menu */
+    nav ul {
+        list-style-type: none; /* Remove bullet points */
+        margin: 30px 0 0 0;
+        padding: 0;
+        display: flex; /* Horizontal alignment */
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #00d8d6; /* Cyan accent */
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s ease; /* Smooth transition */
+    }
+
+    /* Hover effect */
+    nav a:hover {
+        background-color: #00d8d6;
+        color: #1e272e;
+    }
+
+    /* 4. Main Sections */
+    main {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 40px; /* Padding */
+        margin-bottom: 30px; /* Margin */
+        background: #ffffff;
+        border-radius: 12px;
+        border: 1px solid #dfe6e9;
+        /* Box shadow for depth */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+        color: #1e272e;
+        margin-top: 0;
+    }
+
+    /* 5. Footer Styles */
+    footer {
+        text-align: center; /* Align text center */
+        padding: 40px 20px;
+        background-color: #1e272e; /* Contrasting background */
+        color: #ffffff; /* Contrasting text */
+        font-size: 0.8rem; /* Smaller font */
+        margin-top: 60px;
+    }
+
+    footer hr {
+        width: 60px;
+        border: 1px solid #00d8d6;
+        margin-bottom: 20px;
+    }
+
