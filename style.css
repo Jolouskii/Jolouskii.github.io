@@ -1,102 +1,133 @@
 
 /* This is the styling for my website */
 body {
-        margin: 0;
-        padding: 0;
-        /* Subtle grey-to-white gradient */
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        background-attachment: fixed;
-        /* Web-safe readable font */
-        font-family: Arial, Helvetica, sans-serif;
-        color: #2d3436;
-        line-height: 1.6;
-    }
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
 
-    /* 2. Header Styles */
-    header {
-        text-align: center; /* Align text center */
-        padding: 60px 20px; /* Padding */
-        background-color: #1e272e; /* Dark background */
-        color: #ffffff;
-    }
+/* 2. Header Styles */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1e272e;
+    color: #ffffff;
+}
 
-    header h1 {
-        font-size: 2.8rem; /* Large font size */
-        font-weight: 800; /* Heavy weight */
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: -1px;
-    }
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+}
 
-    blockquote {
-        font-style: italic;
-        opacity: 0.7;
-        margin-top: 10px;
-    }
+blockquote {
+    font-style: italic;
+    opacity: 0.7;
+}
 
-    /* 3. Navigation Menu */
-    nav ul {
-        list-style-type: none; /* Remove bullet points */
-        margin: 30px 0 0 0;
-        padding: 0;
-        display: flex; /* Horizontal alignment */
-        justify-content: center;
-    }
+/* 3. Navigation Menu & Transitions */
+nav ul {
+    list-style-type: none;
+    margin: 30px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
 
-    nav li {
-        margin: 0 15px;
-    }
+nav li {
+    margin: 0 15px;
+}
 
-    nav a {
-        text-decoration: none;
-        color: #00d8d6; /* Cyan accent */
-        font-weight: bold;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: 0.3s ease; /* Smooth transition */
-    }
+nav a {
+    text-decoration: none;
+    color: #00d8d6;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* Transition for background color and text color */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-    /* Hover effect */
-    nav a:hover {
-        background-color: #00d8d6;
-        color: #1e272e;
-    }
+nav a:hover {
+    background-color: #00d8d6;
+    color: #1e272e;
+}
 
-    /* 4. Main Sections */
-    main {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 0 20px;
-    }
+/* 4. Main Content Sections & Interactivity */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-    section {
-        padding: 40px; /* Padding */
-        margin-bottom: 30px; /* Margin */
-        background: #ffffff;
-        border-radius: 12px;
-        border: 1px solid #dfe6e9;
-        /* Box shadow for depth */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    }
+section {
+    padding: 40px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* Transition for the zoom effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    section h2 {
-        color: #1e272e;
-        margin-top: 0;
-    }
+/* Zoom in on hover */
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
-    /* 5. Footer Styles */
-    footer {
-        text-align: center; /* Align text center */
-        padding: 40px 20px;
-        background-color: #1e272e; /* Contrasting background */
-        color: #ffffff; /* Contrasting text */
-        font-size: 0.8rem; /* Smaller font */
-        margin-top: 60px;
-    }
+section h2 {
+    color: #1e272e;
+    margin-top: 0;
+}
 
-    footer hr {
-        width: 60px;
-        border: 1px solid #00d8d6;
-        margin-bottom: 20px;
-    }
+/* 5. Table Styling */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse;
+    margin-top: 25px;
+    border: 1px solid #dfe6e9;
+}
 
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+th, td {
+    padding: 15px; /* Padding */
+    border: 1px solid #dfe6e9; /* Borders */
+    text-align: left;
+}
+
+thead {
+    background-color: #1e272e; /* Header background color */
+    color: #ffffff;
+}
+
+tfoot {
+    background-color: #f8f9fa;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* 6. Footer Styles */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #1e272e;
+    color: #ffffff;
+    font-size: 0.8rem;
+    margin-top: 60px;
+}
+
+footer hr {
+    width: 50px;
+    border: 1px solid #00d8d6;
+    margin-bottom: 20px;
+}
