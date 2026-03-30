@@ -1,45 +1,56 @@
 
 /* This is the styling for my website */
+This is the complete style.css file. It incorporates all your requirements: Flexbox layouts, Media Queries for responsiveness, Form Styling with interactive transitions, and the Table Styling.
+
+CSS
+/* --- 1. Background and Font --- */
 body {
     margin: 0;
     padding: 0;
+    /* Soft aesthetic gradient */
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     background-attachment: fixed;
+    /* Web-safe readable font */
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+    color: #2d3436;
     line-height: 1.6;
 }
 
-/* 2. Header Styles */
+/* --- 2. Header Styles --- */
 header {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #1e272e;
+    text-align: center; /* Align text center */
+    padding: 60px 20px; /* Padding */
+    background-color: #1e272e; /* Dark background */
     color: #ffffff;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 2.8rem; /* Font size */
+    font-weight: 800; /* Font weight */
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
 blockquote {
     font-style: italic;
     opacity: 0.7;
+    margin-top: 10px;
 }
 
-/* 3. Navigation Menu & Transitions */
+/* --- 3. Navigation Menu (Flexbox) --- */
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     margin: 30px 0 0 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Horizontal */
     justify-content: center;
+    gap: 20px; /* Gap for Flexbox */
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav a {
@@ -48,7 +59,7 @@ nav a {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    /* Transition for background color and text color */
+    /* CSS Transformation: Transition for background color */
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -57,27 +68,30 @@ nav a:hover {
     color: #1e272e;
 }
 
-/* 4. Main Content Sections & Interactivity */
+/* --- 4. Main Content Sections (Flexbox & Interactivity) --- */
 main {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Stacked vertically */
+    gap: 30px; /* Gap between sections */
 }
 
 section {
     padding: 40px;
-    margin-bottom: 30px;
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* Transition for the zoom effect */
+    border: 1px solid #dfe6e9;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    /* CSS Transformation: Transition for zoom effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Zoom in on hover */
+/* Section Zoom in on hover */
 section:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 section h2 {
@@ -85,7 +99,7 @@ section h2 {
     margin-top: 0;
 }
 
-/* 5. Table Styling */
+/* --- 5. Table Styling --- */
 table {
     width: 100%; /* Full width */
     border-collapse: collapse;
@@ -116,18 +130,87 @@ tfoot {
     text-align: center;
 }
 
-/* 6. Footer Styles */
-footer {
-    text-align: center;
-    padding: 40px;
+/* --- 6. Contact Form Styling (Flexbox) --- */
+.contact-form {
+    display: flex; /* Flexbox */
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex; /* Flexbox */
+    flex-direction: column;
+    gap: 5px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: 6px;
+    font-family: inherit;
+    /* Transition for border color */
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00d8d6;
+    outline: none;
+}
+
+.submit-btn {
     background-color: #1e272e;
-    color: #ffffff;
-    font-size: 0.8rem;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    /* Transition for background color */
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #00d8d6;
+    color: #1e272e;
+}
+
+/* --- 7. Footer Styles --- */
+footer {
+    text-align: center; /* Align text center */
+    padding: 40px 20px;
+    background-color: #1e272e; /* Contrasting background */
+    color: #ffffff; /* Contrasting text */
+    font-size: 0.8rem; /* Smaller font */
     margin-top: 60px;
 }
 
 footer hr {
-    width: 50px;
+    width: 60px;
     border: 1px solid #00d8d6;
     margin-bottom: 20px;
+}
+
+/* --- 8. Responsive Design (Media Queries) --- */
+
+/* Tablet Display */
+@media (min-width: 768px) {
+    header h1 { font-size: 3.2rem; }
+    main { padding: 0 40px; }
+}
+
+/* Desktop Display */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1100px;
+    }
+}
+
+/* Phone Display */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stacked for mobile */
+        align-items: center;
+    }
+    header h1 { font-size: 2rem; }
+    section { padding: 20px; }
 }
