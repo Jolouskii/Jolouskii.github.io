@@ -6,3 +6,5 @@
 
 ## Contributing
 Feel free to submit a pull request or open an issue if you have suggestions or improvements!
+
+<img width="468" height="251" alt="image" src="https://github.com/user-attachments/assets/4de2926d-19ab-4478-b74b-b39238406811" />
